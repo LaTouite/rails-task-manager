@@ -1,0 +1,28 @@
+<div class='title_page'>
+  <h1>My Tasks</h1>
+</div>
+<div>
+  <h1><%= @task.title %></h1>
+</div>
+<div>
+  <div>
+    <p><%= @task.details %></p>
+    <p>
+      <% if @task.completed %>
+        <i class="far fa-check-circle"></i>
+        This task is completed
+      <% else %>
+        <i class="far fa-times-circle"></i>
+        This task is not completed yet
+      <% end %>
+    </p>
+  </div>
+  <div class='box'>
+    <div class='button'>
+      <span class='button_text'><%= link_to 'Edit', edit_path %></span>
+    </div>
+    <div class='button'>
+      <span class='button_text'><%= link_to "Back to list", tasks_path %></span>
+    </div>
+  </div>
+</div>
